@@ -11,7 +11,7 @@ export default {
 
 <template>
   <navigation />
-  <!-- Add a router view -->
+  <router-view />
 </template> 
 
 <style scoped>

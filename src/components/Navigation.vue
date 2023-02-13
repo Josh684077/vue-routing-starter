@@ -3,16 +3,15 @@
     <div class="container-fluid">
       <ul class="navbar-nav me-auto mb-2 mb-md-0">
         <li class="nav-item">
-          <!-- Add a router link to the homepage (don't use the a tag!) -->
-          <a class="nav-link" active-class="active" href="#">Home</a>
+          <router-link to="/" active-class="active">Home</router-link>
         </li>
+        -
         <li class="nav-item">
-          <!-- Add a router link to the create product page (don't use the a tag!) -->
-          <a class="nav-link" active-class="active" href="#">Create product</a>
+          <router-link to="/create" active-class="active">Create Product</router-link>
         </li>
+        -
         <li class="nav-item">
-          <!-- add a router link to the products page (don't use the a tag!) -->
-          <a class="nav-link" active-class="active" href="#">Products</a>
+          <router-link to="/products" active-class="active">Products</router-link>
         </li>
       </ul>
     </div>
@@ -20,10 +19,16 @@
 </template>
 
 <script>
+import router from '../router';
+
 export default {
-  name: "Navigation",
+    name: "Navigation",
+    components: { router }
 };
 </script>
 
 <style>
+.active{
+  color: aquamarine;
+}
 </style>
